@@ -4,6 +4,9 @@ import colors from 'colors';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './config/db.js';
+import goalRouter from './routes/goalRouter.js';
+import userRouter from './routes/userRouter.js';
+
 
 dotenv.config()
 
@@ -20,6 +23,9 @@ app.use(cors());
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan("dev"))
 }
+
+app.use('/api/users', userRouter);
+app.use('/api/goals', goalRouter);
 
 const PORT = process.env.PORT || 5000;
 
