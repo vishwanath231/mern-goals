@@ -15,4 +15,5 @@ router
 .route('/getMe')
 .get(protect, getUser);
 
+
 export default router;
