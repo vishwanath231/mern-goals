@@ -2,6 +2,11 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const goalSchema = new Schema({
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'User'
+    },
     goal: {
         type: String,
         required: true
@@ -14,6 +19,6 @@ const goalSchema = new Schema({
     timestamps: true
 })
 
-const Goal = mongoose.model('users', goalSchema);
+const Goal = mongoose.model('goals', goalSchema);
 
 export default Goal;
