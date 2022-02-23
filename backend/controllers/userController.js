@@ -118,4 +118,4 @@ export {
     registerUser,
     loginUser,
     getUser
-}
+};
