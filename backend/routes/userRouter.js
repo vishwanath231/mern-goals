@@ -4,7 +4,7 @@ import { registerUser, loginUser, getUser } from '../controllers/userController.
 import protect from '../middlewares/authMiddleware.js';
 
 router
-.route('/register')
+.route('/')
 .post(registerUser);
 
 router
