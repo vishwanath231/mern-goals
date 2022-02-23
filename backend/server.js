@@ -6,6 +6,7 @@ import cors from 'cors';
 import connectDB from './config/db.js';
 import goalRouter from './routes/goalRouter.js';
 import userRouter from './routes/userRouter.js';
+import errorHandler from './middlewares/errorMiddleware.js'
 
 
 dotenv.config()
@@ -26,6 +27,8 @@ if (process.env.NODE_ENV === 'development') {
 
 app.use('/api/users', userRouter);
 app.use('/api/goals', goalRouter);
+
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
