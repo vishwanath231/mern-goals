@@ -1,0 +1,84 @@
+.goalList__container {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 0 15px;
+}
+
+.goallist__box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5em;
+}
+
+
+.checking__goals{
+    text-align: center;   
+}
+
+.goalList{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px, rgba(0, 0, 0, 0.1) 0px 6px 6px;
+    padding: 1rem;
+    border-radius: 6px;
+    height: auto;
+}
+
+.completed{
+    color: rgb(44, 192, 93);
+}
+
+.uncompleted{
+    color: #F93154;
+}
+
+
+.goal{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.goal__info{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    margin: .5rem 0 1rem 0;
+}
+
+.goal__btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.goal__btns button {
+    width: 110%;
+    border: none;
+    padding: .6rem 1rem;
+    outline-color: cornflowerblue;
+    cursor: pointer;
+    border-radius: 3px;
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.check__icon{
+    background-color: #00B74A;
+    margin-right: 1rem;
+}
+
+
+
+.delete__icon {
+    background-color: #F93154;
+    margin-left: 1rem;
+}
+
+
+
+
+@media(min-width:768px){
+    .goallist__box {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+}
