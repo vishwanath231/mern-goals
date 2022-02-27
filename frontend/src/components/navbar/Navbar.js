@@ -28,8 +28,9 @@ const Navbar = ({ auth ,logoutUser }) => {
             <div className='navbar'>
                 <div className='nav'>
                     <div className='navbar__left'>
-                        <NavLink to='/'>
+                        <NavLink to='/' className='navbar__logos'>
                             <img src={LOGO} alt='logo' className='logo' />
+                            <div className='logo__title' >GoalSetter</div>
                         </NavLink>
                     </div>
                     <div className='navbar__right'>
