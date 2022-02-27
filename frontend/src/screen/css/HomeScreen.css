@@ -1,0 +1,84 @@
+.dashboard__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.dashboard__box {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.dashboard__title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.dashboard__title__two{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.dashboard__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard__form label{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: .3rem;
+}
+
+.dashboard__form input {
+    padding: .7rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+    border: 1px solid #d1d1d1;
+    font-size: 1rem;
+    font-weight: 500;
+    outline-color: cornflowerblue;
+}
+
+.dashboard__form button {
+    padding: .7rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+    border: 1px solid #0F1122;
+    font-size: 1rem;
+    font-weight: 500;
+    outline-color: #000;
+    background-color: #0F1122;
+    cursor: pointer;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.default__home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+.default__home div {
+    font-size: 1.2rem;
+}
+.default__home h1{
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+
+@media(min-width:768px) {
+    .dashboard__box {
+        width: 700px;
+    }
+}
