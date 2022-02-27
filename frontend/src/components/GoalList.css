@@ -32,16 +32,20 @@
 
 
 .goal{
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     line-height: 22px;
+    margin-bottom: 1rem;
 }
 
 .goal__info{
     display: flex;
     justify-content: left;
     flex-direction: column;
-    margin: .5rem 0 1rem 0;
+    margin: .5rem 0 1.2rem 0;
+}
+.goal__time{
+    margin: .2rem 0;
 }
 
 .goal__btns {
@@ -51,26 +55,33 @@
 }
 
 .goal__btns button {
-    width: 110%;
+    width: 100%;
     border: none;
-    padding: .6rem 1rem;
+    padding: .7rem 1rem;
     outline-color: cornflowerblue;
     cursor: pointer;
-    border-radius: 3px;
-    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px; */
+    border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: .2s ease-in-out;
+    color: #fff;
 }
 
+.goal__btns button:hover {
+    box-shadow: 0px 11px 15px rgba(87, 87, 87, 0.4);
+    color: #000;
+    transform: translateY(-5px);
+}
+   
 .check__icon{
     background-color: #00B74A;
-    margin-right: 1rem;
+    margin-right: .5rem;
 }
 
 
 
 .delete__icon {
     background-color: #F93154;
-    margin-left: 1rem;
+    margin-left: .5rem;
 }
 
 
