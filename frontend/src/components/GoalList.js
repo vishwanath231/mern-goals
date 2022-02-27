@@ -48,7 +48,7 @@ const GoalList = ({goal, getGoals, isAuthenticated, deleteGoal, updatedGoal }) =
                                             </div>
                                             <div className='goal__btns'>
                                                     <button className='check__icon' onClick={val.isCheck ? () => unCheckGoal(val._id) : () => checkGoal(val._id)}>
-                                                    <GoCheck   />
+                                                    <GoCheck  className='goal__check' />
                                                     </button>
                                                 <button className='delete__icon' onClick={() => handelDeleteGoal(val._id)}><FaRegTrashAlt className='goal__delete'/></button>
                                             </div>
