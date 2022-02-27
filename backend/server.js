@@ -6,7 +6,8 @@ import cors from 'cors';
 import connectDB from './config/db.js';
 import goalRouter from './routes/goalRouter.js';
 import userRouter from './routes/userRouter.js';
-import errorHandler from './middlewares/errorMiddleware.js'
+import errorHandler from './middlewares/errorMiddleware.js';
+import path from 'path';
 
 // env
 dotenv.config()
@@ -34,6 +35,24 @@ app.use('/api/goals', goalRouter);
 
 // Error handler
 app.use(errorHandler);
+
+// Heroku deployment
+
+const __dirname = path.resolve()
+
+if (process.env.NODE_ENV === 'production') {
+    
+    app.use(express.static(path.join(__dirname, '/frontend/build')))
+
+    app.get('*', (req, res) => 
+        res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
+    )
+}else{
+
+    app.get('/', (req, res) => {
+        res.send('API is running...')
+    })
+}
 
 // Port
 const PORT = process.env.PORT || 5000;
