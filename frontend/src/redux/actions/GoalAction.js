@@ -17,7 +17,7 @@ export const getGoals = () => (dispatch, getState) => {
 
     dispatch(setGoalLoading());
 
-    axios.get('/api/goals', tokenConfig(getState))
+    axios.get('http://localhost:5000/api/goals', tokenConfig(getState))
     .then(res => {
         dispatch({
             type: GET_GOALS,
@@ -36,7 +36,7 @@ export const getGoals = () => (dispatch, getState) => {
 // ADD NEW GOAL
 export const addGoal = (data) => (dispatch,getState) => {
 
-    axios.post('/api/goals', data, tokenConfig(getState))
+    axios.post('http://localhost:5000/api/goals', data, tokenConfig(getState))
     .then(res => {
         dispatch({
             type: ADD_GOAL,
@@ -53,7 +53,7 @@ export const addGoal = (data) => (dispatch,getState) => {
 // DELETE GOAL
 export const deleteGoal = (id) => (dispatch,getState) => {
 
-    axios.delete(`/api/goals/${id}`, tokenConfig(getState))
+    axios.delete(`http://localhost:5000/api/goals/${id}`, tokenConfig(getState))
     .then(res => {
 
         dispatch({
@@ -76,7 +76,7 @@ export const deleteGoal = (id) => (dispatch,getState) => {
 // UPDATE GOAL
 export const updatedGoal = (id, data) => (dispatch, getState) => {
 
-    axios.put(`/api/goals/${id}`, data, tokenConfig(getState))
+    axios.put(`http://localhost:5000/api/goals/${id}`, data, tokenConfig(getState))
     .then(res => {
         dispatch({
             type: GOAL_CHECK,

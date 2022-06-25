@@ -16,7 +16,7 @@ import { getError } from './errorAction';
 // USER DATA
 export const userLoaded = () => (dispatch, getstate)=> {
 
-    axios.get(`/api/users/getMe`, tokenConfig(getstate))
+    axios.get(`http://localhost:5000/api/users/getMe`, tokenConfig(getstate))
     .then(res => {
 
         dispatch({
@@ -45,7 +45,7 @@ export const login = (data) => dispatch => {
     }
 
 
-    axios.post('/api/users/login',data, config )
+    axios.post('http://localhost:5000/api/users/login',data, config )
     .then(res => {
 
         dispatch({
@@ -75,7 +75,7 @@ export const register = (data) => dispatch => {
         }
     }
 
-    axios.post('/api/users', data, config)
+    axios.post('http://localhost:5000/api/users', data, config)
     .then(res => {
 
         dispatch({
